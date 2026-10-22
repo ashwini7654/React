@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>My Fourth React Application</title>
+     <title>My sixth React Application</title>
     <script 
     crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
 </script>
@@ -16,12 +16,10 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
     <script>
         function MyApp()
         {
-            let myHeading= React.createElement("h1",null,"What is React");
-            let myPar=React.createElement("p",null,"React is component based JS labrary");
-           let myDiv=React.createElement("div",null,myHeading,myPar);
-           return myDiv;
+            let myElement= React.createElement("h1",{style:{color:"Red",textAlign:"center"}},"ReactRocks");
+           return myElement;
         }
-      
+
        ReactDOM.render(React.createElement(MyApp),document.querySelector("#root"));
 
     </script>

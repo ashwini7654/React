@@ -8,6 +8,18 @@
 <script 
 crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
 </script>
+<style>
+    .heart {
+        color: red;
+        font-size: 20px;
+        transition: font-size 0.3s ease;
+        cursor: pointer;
+    }
+
+    .heart:hover {
+        font-size: 40px;
+    }
+</style>
 </head>
 <body>
     <div id="root">
@@ -17,7 +29,7 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         function MyApp()
         {
 
-          let myHeading=React.createElement("h1",null,"The most populer heart emoji",React.createElement("span",null,"♥️"));
+          let myHeading=React.createElement("h1",null,"The most populer heart emoji",React.createElement("span",{className:"heart"},"♥️"));
          return myHeading;
         }
       

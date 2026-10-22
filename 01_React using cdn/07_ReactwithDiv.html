@@ -16,10 +16,12 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
     <script>
         function MyApp()
         {
-            let myElement= React.createElement("h1",{style:{color:"Red",textAlign:"center"}},"ReactRocks");
-           return myElement;
+            let myHeading= React.createElement("h1",{style:{color:"Blue",textAlign:"center"}}, "What is React");
+            let myPar=React.createElement("p",{style:{color:"Green",textAlign:"center"}}, "React is component based JS labrary");
+           let myDiv=React.createElement("div",{style:{border:"1px solid black",textAlign:"center"}},myHeading,myPar);
+           return myDiv;
         }
-
+      
        ReactDOM.render(React.createElement(MyApp),document.querySelector("#root"));
 
     </script>

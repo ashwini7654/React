@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>My Fourth React Application</title>
+     <title>My Fivth React Application</title>
     <script 
     crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
 </script>
@@ -21,10 +21,7 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         }
     
        let myDiv=document.querySelector("#root");
-       let element=React.createElement(MyApp);
-       //My app ek normal funcation nhi h ye ek components h yaha pr callback ho raha components ki pahchan M capital letter mai h 
-       
-       ReactDOM.render(element,myDiv);
+       ReactDOM.render(React.createElement(MyApp),myDiv);
 
     </script>
 </body>

@@ -19,7 +19,10 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
 
            let myDiv=React.createElement("div",null,
            React.createElement("h1",null," What is react"),
-           React.createElement("p",null,"React ia component based language"), React.createElement("ul",null,React.createElement("li",null,"facebook"),React.createElement("li",null,"InstaGram"),React.createElement("li",null,"Whatsapp")));
+           React.createElement("p",null,"React ia component based language"),
+            React.createElement("ul",null,React.createElement("li",null,"facebook"),
+            React.createElement("li",null,"InstaGram"),
+            React.createElement("li",null,"Whatsapp")));
            return myDiv;
         }
        ReactDOM.render(React.createElement(MyApp),document.querySelector("#root"));

@@ -21,7 +21,10 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         }
     
        let myDiv=document.querySelector("#root");
-       ReactDOM.render(React.createElement(MyApp),myDiv);
+       let element=React.createElement(MyApp);
+       //My app ek normal funcation nhi h ye ek functionalcomponents h yaha pr callback ho raha components ki pahchan M capital letter mai h 
+       
+       ReactDOM.render(element,myDiv);
 
     </script>
 </body>
