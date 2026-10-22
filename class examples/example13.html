@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 13</title>
+    <script>
+      class Emp {
+        constructor(id, name, sal) {
+          this.id = id;
+          this.name = name;
+          this.sal = sal;
+        }
+        raiseSalary(percent) {
+          this.sal = this.sal + (this.sal * percent/100);
+        }
+      }
+      let e1 = new Emp(101, "Ankit", 80000.0);
+      document.write(`id:${e1.id},name:${e1.name},sal:${e1.sal}<br>`);
+      let e2 = new Emp(102, "Deepak", 65000.0);
+      document.write(`id:${e2.id},name:${e2.name},sal:${e2.sal}<br>`);
+      e1.raiseSalary(20);
+      e2.raiseSalary(30);
+      document.write("AFter incrementing salary<br>");
+      document.write(`id:${e1.id},name:${e1.name},sal:${e1.sal}<br>`);
+      document.write(`id:${e2.id},name:${e2.name},sal:${e2.sal}<br>`);
+    </script>
+  </head>
+  <body></body>
+</html>

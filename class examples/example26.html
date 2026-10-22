@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 26</title>
+    <script>
+      class Emp {
+        constructor(id, name, sal) {
+          this.id = id;
+          this.name = name;
+          this.sal = sal;
+          document.write("Emp created...<br>");
+        }
+        raiseIncome(){
+            this.sal=this.sal+this.sal*0.1;
+        }
+        toString() {
+          return `id:${this.id},name:${this.name},sal:${this.sal}`;
+        }
+      }
+      class Manager extends Emp {
+        constructor(id, name, sal, bonus) {
+          super(id, name, sal);
+          this.bonus = bonus;
+          document.write("Manager created...<br>");
+        }
+        raiseIncome(){//this is called method overriding
+            super.raiseIncome();
+            this.bonus=this.bonus+this.bonus*0.1;
+        }
+        toString() {//this is called method overriding
+          return `${super.toString()},bonus:${this.bonus}`;
+        }
+      }
+      let boss = new Manager(101, "Gagan", 50000.0, 25000.0);
+      document.write(`${boss}`);
+      document.write("<br>After increment<br>");
+      boss.raiseIncome();
+      document.write(`${boss}`);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My React App 14</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function MyApp() {
+        let myHeading = React.createElement("h1", null, "Contact List");
+        let myUl = React.createElement(
+          "ul",
+          null,
+          React.createElement("li", null, "Mr.Sachin Kapoor"),
+          React.createElement("li", null, "Mr.Paramjeet Singh"),
+          React.createElement("li", null, "Mr.Afroz Alam")
+        );
+        let myDiv = React.createElement("div", null, myHeading, myUl);
+        return myDiv;
+      }
+
+      ReactDOM.render(
+        React.createElement(MyApp),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>

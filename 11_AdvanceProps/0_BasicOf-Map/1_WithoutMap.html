@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using ForEach traversal</title>
+</head>
+<body>
+<script>
+    function doubler(x)
+    {
+        return x*2;
+    }
+    let arr=[3,5,7,9,2];
+    let brr=[];
+    arr.forEach((x)=>{
+        brr.push(doubler(x))
+    });
+    document.write(arr +"<br>");
+        document.write("After doubler<br>");
+        document.write(brr);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>My  funcational props React Application using object desturcturing</title>
+    <script 
+    crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+</script>
+<script 
+crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        function Greeting(props)
+        {
+       
+       return (
+        <h1>Happy New year to {props.who} from {String(props.from)}</h1>
+       )
+      }
+        let root = ReactDOM.createRoot(document.querySelector("#root"));
+        root.render(<Greeting who="Ashwini" from />);
+// from is key but hmlog key ka value nhi diye h toh true hai 
+    </script>
+</body>
+</html>

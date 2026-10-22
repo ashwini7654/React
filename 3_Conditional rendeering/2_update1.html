@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My JSX App 2 updated of 1</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function getRandomNumber() {
+        let arr = [10, 5, 7, 11, 34, 89, 65, 44, 58, 90];
+        //logic to pick up a random number from the array and return
+        let numberIndex = Math.floor(Math.random() * arr.length);
+        return arr[numberIndex];
+
+        //hint: Math.floor() and Math.random()
+      }
+      function MyApp() {
+        let num = getRandomNumber();
+        let mypara = <p>Number is {num}</p>;
+        let msg = (
+          <small>It is <b>{num % 2 === 0 ? "Even number" : "Odd number"}</b></small>
+        );
+        let myDiv = (
+          <div>
+            {mypara}
+            {msg}
+          </div>
+        );
+        return myDiv;
+      }
+      ReactDOM.render(<MyApp />, document.querySelector("#root"));
+
+    </script>
+  </body>
+</html>

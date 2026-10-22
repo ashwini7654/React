@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>My Assignment React Application</title>
+    <script 
+    crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+</script>
+<script 
+crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script>
+        function MyApp()
+        {
+
+           let myDiv=React.createElement("div",null,
+           React.createElement("h1",null," Contact List"),
+           React.createElement("li",null,"Mr Sachin Kapoor"), React.createElement("li",null,"Mr Sachin Kapoor"), React.createElement("li",null,"Mr Sachin Kapoor"));
+           return myDiv;
+        }
+      
+       ReactDOM.render(React.createElement(MyApp),document.querySelector("#root"));
+
+    </script>
+</body>
+</html>

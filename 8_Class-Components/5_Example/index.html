@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Class based Lottery</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      .lt{
+        color: red;
+        position: relative; /* For positioning the text */
+      border: 2px solid #000; /* Define the border */
+      border-radius: 30px;
+      padding: 20px; /* Add some space inside the border */
+      text-align: center; /* Center the text horizontally */
+      width: 300px; /* Set a width for the container */
+      margin: 20px auto
+      }
+      #tl{
+color: orangered;
+font-size: 50px;
+text-align: center;
+      }
+      #show{
+         position: relative;
+          /* For positioning the text */
+      border: 2px solid #000; /* Define the border */
+      border-radius: 30px;
+      padding: 20px; /* Add some space inside the border */
+      text-align: center; /* Center the text horizontally */
+     
+      margin: 20px auto
+      }
+      #boy{
+        size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+   <!-- <img src="/0_Media/download.jpg"/> -->
+    <h1  id="tl">Lucky Lottery</h1>
+    <h2 class="lt">Lottery no: 6</h2>
+    <div id="root"></div>
+    <script type="text/babel">
+      function getRandomNumber() {
+        let arr = [10, 5, 7, 6, 34, 89, 65, 44, 58, 90];
+        let numberIndex = Math.floor(Math.random() * arr.length);
+        return arr[numberIndex];
+
+      
+      }
+      class App extends React.Component{
+        render(){
+        let num = getRandomNumber();
+        let myDiv = (
+          <div id="show">
+            <h1>Number is {num}</h1>
+            <small> {num=== 6 ? <div>
+            <h2>Congratulation !! You won</h2><img id="boy" src="/0_Media/boy.jpg"/></div> :
+             <div> <h2>Better Luck Next Time</h2> <img src="/0_Media/download.jpg"/></div>}</small>
+          </div>
+        );
+        return myDiv;
+      }
+    }
+
+    let root = ReactDOM.createRoot(document.querySelector("#root"));
+    root.render(<App />);
+
+    </script>
+  </body>
+</html>

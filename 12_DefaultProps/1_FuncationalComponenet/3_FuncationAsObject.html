@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Funcation as Object</title>
+  </head>
+  <body>
+    <script>
+        // In js Funcation is treated as object see below greetings is funcation  but we declare greetings.username as object can treated
+      function greetings() {
+        document.write("Hello " + greetings.username);
+        // here we can get
+      }
+      greetings.username = "Sachin";
+      greetings();
+    </script>
+  </body>
+</html>

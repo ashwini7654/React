@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>MyDefault props React Application using desturcturing</title>
+    <script 
+    crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+</script>
+<script 
+crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        // this is first way to implement defaultprops whic is known as destructuring default props 
+        function Greeting({ who="Everyone",from="Team Sca"})
+        // as we see there is no any from key in rendering as if see above done  then implement default props if no any props is available then react can use default props
+        {
+       
+       return (
+        <h1>Happy New year to {who} from {from}</h1>
+       )
+      }
+        let root = ReactDOM.createRoot(document.querySelector("#root"));
+        root.render(<Greeting who="Ashwini"  />);
+
+    </script>
+</body>
+</html>

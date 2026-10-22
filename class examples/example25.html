@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 23</title>
+    <script>
+      class Emp {
+        constructor(id, name, sal) {
+          this.id = id;
+          this.name = name;
+          this.sal = sal;
+          document.write("Emp created...<br>");
+        }
+        toString() {
+          return `id:${this.id},name:${this.name},sal:${this.sal}`;
+        }
+      }
+      class Manager extends Emp {
+        constructor(id, name, sal,bonus) {
+          super(id, name, sal);
+          this.bonus=bonus;
+          document.write("Manager created...<br>");
+        }
+        toString(){
+       
+            return `${super.toString()},bonus:${this.bonus}`;
+        }
+      }
+      let boss = new Manager(101, "Gagan", 50000.0,25000.0);
+      document.write(`${boss}`);
+    </script>
+  </head>
+  <body></body>
+</html>

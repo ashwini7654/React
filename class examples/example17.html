@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 15</title>
+    <script>
+      class Vehicle {
+        constructor() {
+          document.write("Vehicle created...<br>");
+        }
+        accelerate() {
+          document.write("Vehicle is accelerating<br>");
+        }
+      }
+      class Car extends Vehicle {
+        constructor() {
+            super();// This line is compulsory
+            document.write("Car created...<br>");
+          }
+        reverse() {
+          document.write("Car is reversing<br>");
+        }
+      }
+      let audi = new Car();
+      audi.accelerate();
+      audi.reverse();
+    </script>
+  </head>
+  <body></body>
+</html>

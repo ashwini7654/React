@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 27</title>
+    <script>
+      class Circle {
+        constructor(radius) {
+          this.radius = radius;
+        }
+        area() {
+          let cal1 = Math.PI * Math.pow(this.radius, 2);
+          return cal1.toFixed(2);
+        }
+      }
+      class Cylinder extends Circle {
+        constructor(radius, height) {
+          super(radius);
+          this.height = height;
+        }
+        area() {
+          //2*pi*rad^2+2*pi*rad*height
+          let cal2 = 2 * Math.PI * this.radius * this.height;
+          return (2 * super.area() + cal2).toFixed(2);
+        }
+        volume() {
+          return (super.area() * this.height).toFixed(2);
+        }
+      }
+      let obj = new Cylinder(5, 10);
+      document.write(`Area is ${obj.area()}<br>`);
+      document.write(`<br>Volume is ${obj.volume()}<br>`);
+    </script>
+  </head>
+  <body></body>
+</html>
