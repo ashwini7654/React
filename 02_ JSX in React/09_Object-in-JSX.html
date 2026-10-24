@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>My  React With JSX Application Actor</title>
+     <title>Object in JSX</title>
     <script 
     crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
 </script>
@@ -21,7 +21,12 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
              let actor={name:"Allu Arjun",hit:"Pushpa 2"}
        
           let myDiv=(<div>
-                <p>Famous movie is {actor}</p>
+          
+               //<p>Actor name is {actor}</p>
+               //React mein curly braces {} ke andar JavaScript expression likhte hain. Lekin React plain JavaScript object ko directly render nahi kar sakta.
+               //object is not valid for React child. Isliye humne object ke properties ko access kiya hai jaise actor.name aur actor.hit.
+               <p>Actor name is {actor.name}</p>
+                <p>Famous movie is {actor.hit}</p>
                </div>);
            return myDiv;
         }
