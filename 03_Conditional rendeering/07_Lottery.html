@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lottery App</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+
+    <div id="root"></div>
+    <script type="text/babel">
+     function lotteryNumber(){
+      let lotteryNumber = Math.floor(Math.random() * 10) + 1;
+      return lotteryNumber;
+     }
+     function MyApp() {
+      let luckyNum = 9;
+      let lotteryNum = lotteryNumber();
+      
+       return (
+        <div>
+          <p>Lottery Number is {lotteryNum}</p>
+          {lotteryNum == luckyNum ? <p>Congratulations! You have won the lottery. Your lucky number is {luckyNum} </p> : <p>Sorry! You have lost the lottery. Your lucky number is {lotteryNum} </p>}
+        </div>
+      );   
+     }
+     ReactDOM.render(<MyApp/>, document.querySelector("#root"));
+    </script>
+  </body>
+</html>
