@@ -16,7 +16,7 @@
     <div id="root"></div>
     <script type="text/babel">
       function getRandomNumber() {
-        let arr = [10, 5, 7, 11, 34, 89, 65, 44, 58, 90];
+        let arr = [10, 12,22,30, 34, 89, 65, 44, 58, 90];
         //logic to pick up a random number from the array and return
         let numberIndex = Math.floor(Math.random() * arr.length);
         return arr[numberIndex];
@@ -27,16 +27,18 @@
         let num = getRandomNumber();
      
         let msg;
-        switch(num%2===o)
+        switch(num % 2 === 0)
         {
             case true:
-                <small>It is Even NUMBER</small>
-                return;
-                default:<small>its is odd number</small>
+               msg=<small>It is Even NUMBER</small>
+               break;
+                default:
+                  msg=<small>It is odd number</small>
         }
         let myDiv = (
           <div>
             <p>Number is {num}</p>
+            {msg}
           </div>
         );
         return myDiv;
