@@ -25,17 +25,12 @@
       }
       function MyApp() {
         let num = getRandomNumber();
-        let mypara = <p>Number is {num}</p>;
-        let msg = (
-          <small>It is <b>{num % 2 === 0 ? "Even number" : "Odd number"}</b></small>
-        );
-        let myDiv = (
+        return (
           <div>
-            {mypara}
-            {msg}
+          <p>Number is {num}</p>
+          <small>It is <b>{num % 2 === 0 ? "Even number" : "Odd number"}</b></small>
           </div>
-        );
-        return myDiv;
+        )
       }
       ReactDOM.render(<MyApp />, document.querySelector("#root"));
 
