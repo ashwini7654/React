@@ -10,7 +10,7 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
 </script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <style>
-    h1 {
+    .clock{
         color: red;
     }
 </style>
@@ -26,7 +26,7 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
          // Create a new Date object
          let currentTime = new Date();
           let myPara=(<div>
-                <h1 className="Clock"> My Clock components</h1>
+                <h1 className="clock"> My Clock components</h1>
                 <p>Current date and time are {currentTime.toLocaleString()}</p>
              </div>  );
            return myPara;
