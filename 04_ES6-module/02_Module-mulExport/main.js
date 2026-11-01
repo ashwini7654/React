@@ -1,4 +1,4 @@
-import greetings from './welcome.js';
+import  {greetings }from './welcome.js';
 greetings("ashwini");
 console.log("PI is ",pi);
 
