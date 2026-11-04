@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 29</title>
+    <script>
+      class Emp{
+        static companyName="Amazon";
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+            
+        }
+        show(){
+            document.write(`name:${this.name},age:${this.age},company:${Emp.companyName}<br>`);
+        }
+      }
+      let e1=new Emp("Sudhir",24);
+      let e2=new Emp("Vivek",32);
+      e1.show();
+      e2.show();
+
+    </script>
+  </head>
+  <body></body>
+</html>

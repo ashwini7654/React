@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 33</title>
+    <script>
+      class Emp {
+        #salary;
+        constructor(age, name, sal) {
+          this.age = age;
+          this.name = name;
+          this.#salary = sal;
+        }
+        show() {
+          document.write(
+            `age:${this.age},name:${this.name},sal:${this.#salary}<br>`
+          );
+        }
+      }
+      let obj1 = new Emp(23, "Anil", 80000.0);
+      let obj2 = new Emp(25, "Dheeraj", 60000.0);
+      //console.log(obj);
+      obj1.show();
+      obj2.show();
+    </script>
+  </head>
+  <body></body>
+</html>
