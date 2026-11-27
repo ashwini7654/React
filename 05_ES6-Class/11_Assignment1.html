@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment  1</title>
+    <script>
+    class Emp {
+     constructor(id,name,sal){
+      this.id=id;
+      this.name=name;
+      this.sal=sal;
+        }
+        raiseSalary(x){
+            this.sal=this.sal +this.sal*x/100;
+        }
+    }
+       
+        let e1= new Emp(101,"ashwini",20000);
+        document.write(`id:${e1.id},name:${e1.name},sal:${e1.sal}` + "<br>");
+        let e2= new Emp(102,"raj",30000);
+        document.write(`id:${e2.id},name:${e2.name},sal:${e2.sal}` + "<br>");
+
+       setTimeout(()=>{
+        document.write("Before Increment" + "<br>");
+         let e1= new Emp(101,"ashwini",20000);
+        document.write(`id:${e1.id},name:${e1.name},sal:${e1.sal}` + "<br>");
+        let e2= new Emp(102,"raj",30000);
+        document.write(`id:${e2.id},name:${e2.name},sal:${e2.sal}` + "<br>");
+         let x=prompt("Enter the percentage of salary increment for e1");
+        let y=prompt("Enter the percentage of salary increment for e2");
+        e1.raiseSalary(x);
+        e2.raiseSalary(y);
+        document.write("After Increment" + "<br>");
+        document.write(`id:${e1.id},name:${e1.name},sal:${e1.sal}` + "<br>");
+        document.write(`id:${e2.id},name:${e2.name},sal:${e2.sal}` + "<br>");
+       },2000)
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
