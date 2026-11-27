@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Example</title>
     <script>
-        // this will give undefined because constructor ke andar  always this lga kr property bnneyege this or var se noramal varible bnnte h
         class Emp
         {
      constructor(id,name,sal){
@@ -13,12 +12,15 @@
       this.name=name;
       this.sal=sal;
         }
-      
+      toString(){
+            return `id:${this.id},name:${this.name},sal:${this.sal}`;   
     }
+}
+//Agar bina toString method  se hm object ko print karte hai to hme object ka address print hoga to avoid that we use toString method to print the object in a readable format.
         let e1= new Emp(101,"ashwini",20000);
-        document.write(`id:${e1.id},name:${e1.name},sal:${e1.sal}`);
+        document.write(`${e1}`);
         let e2= new Emp(102,"raj",30000);
-        document.writeg(`id:${e2.id},name:${e2.name},sal:${e2.sal}`);
+        document.write(`${e2}`);
      
 
     </script>
