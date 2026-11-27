@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Class</title>
+
+    <script>
+        class Car {
+
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age() {
+                return new Date().getFullYear() - this.year;
+            }
+
+            toString() {
+                return this.name + " " + this.year;
+            }
+        }
+
+        let car1 = new Car("Ford", 2014);
+        let car2 = new Car("Audi", 2019);
+
+        console.log(car1.toString());
+        console.log(car2.toString());
+
+        console.log("Car 1 Age: " + car1.age());
+        console.log("Car 2 Age: " + car2.age());
+
+    </script>
+</head>
+<body>
+</body>
+</html>
