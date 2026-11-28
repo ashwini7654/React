@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <script>
+        class Emp{
+            constructor(id,name,sal){
+                this.id=id;
+                this.name=name;
+                this.sal=sal;
+            }
+            display(){
+                document.write(`id:${this.id},name:${this.name},sal:${this.sal}<br>`)
+            }
+        }
+        class Manager extends Emp{
+            constructor(){
+                super();
+                document.write("Manager created...<br>");
+            }
+           
+        }
+        let boss = new Manager(101,"Gagan",50000.0);
+        boss.display();
+        //give error because the constructor of the parent class is automatically called when a child class is instantiated, even if the child class does not have its own constructor defined.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
