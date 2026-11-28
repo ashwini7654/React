@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <script>
+        class Emp{
+            constructor(id,name,sal){
+                this.id=id;
+                this.name=name;
+                this.sal=sal;
+            }
+            display(){
+                document.write(`id:${this.id},name:${this.name},sal:${this.sal}<br>`)
+            }
+        }
+        class Manager extends Emp{
+            constructor(id,name,sal,bonus){
+                super(id,name,sal);
+                this.bonus=bonus;
+                document.write("Manager created...<br>");
+            }
+            display(){
+                super.display();
+                document.write(`bonus:${this.bonus}<br>`);
+            }
+            
+        }
+        let boss = new Manager(101,"Gagan",50000.0,25000.0);
+        boss.display();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
