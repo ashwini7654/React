@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script>
+        class Circle{
+            constructor(radius){
+                this.radius=radius;
+            }
+            area(){
+                let cal1=Math.PI*Math.pow(this.radius,2);
+                return cal1.toFixed(2);
+            }
+        }
+        class Cylinder extends Circle{
+            constructor(radius,height){
+                super(radius);
+                this.height=height;
+            }
+            area(){
+                let cal1=2*Math.PI*this.radius*this.height+2*super.area();
+                return cal1.toFixed(2);
+            }
+            volume(){
+                let cal2=super.area()*this.height;
+                return cal2.toFixed(2);
+            }
+            cicleArea(){
+                return super.area();
+            }
+        }
+        let obj = new Cylinder(5,10);
+        document.write(`Area of Cylinder is ${obj.area()}<br>`);
+        document.write(`Volume of Cylinder is ${obj.volume()}<br>`);
+       // document.write(`Area of Circle is ${super.area()}<br>`); // This line will throw an error because 'super' cannot be used in this context.
+        document.write(`Area of Circle is ${obj.cicleArea()}<br>`);
+        //this is the correct way to call the parent class method from the child class instance.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
